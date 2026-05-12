@@ -56,6 +56,38 @@ public class LinkedList<T> implements List<T> {
 		}
 	}
 	
+	//helper insert methods
+	
+	public void insertAtFront(T val) {
+	    Node<T> tmp = new Node<T>(val);
+	    if (empty()) {
+	        current = head = tmp;
+	    } else {
+	        tmp.next = head;
+	        head = tmp;
+	        current = head;
+	    }
+	}
+
+	public void insertBefore(T val) {
+	    if (empty() || current == head) {
+	        insertAtFront(val);
+	        return;
+	    }
+
+	    Node<T> before = head;
+	    while (before != null && before.next != current) {
+	        before = before.next;
+	    }
+	    
+	    Node<T> tmp = new Node<T>(val);
+	    tmp.next = current;
+	    before.next = tmp;
+	    current = tmp;
+	}
+	
+	
+	
 	public void remove () {
 		if (current == head) {
 			head = head.next;

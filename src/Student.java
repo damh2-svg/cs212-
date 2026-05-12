@@ -18,7 +18,7 @@ public class Student implements IStudent {
         
         this.schedule = new LinkedList<IEvent>(); 
     }
-
+    
     @Override
     public String getName() {
         return name;

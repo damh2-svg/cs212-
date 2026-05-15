@@ -1,0 +1,140 @@
+public class Workshop extends Event implements IWorkshop {
+
+    private LinkedList<IStudent> participants;
+
+    public Workshop(int id, String title,
+                    IDateTime start,
+                    IDateTime end,
+                    String location) {
+
+        super(id, title, start, end, location);
+
+        participants = new LinkedList<IStudent>();
+    }
+
+    @Override
+    public LinkedList<IStudent> getParticipants() {
+        return participants;
+    }
+
+    @Override
+    public boolean addParticipant(IStudent student) {
+
+        if (student == null)
+            return false;
+
+        if (participants.empty()) {
+
+            participants.insert(student);
+            return true;
+        }
+
+        participants.findFirst();
+
+        while (true) {
+
+            IStudent current = participants.retrieve();
+
+            if (current.getStudentId() == student.getStudentId())
+                return false;
+
+            if (participants.last())
+                break;
+
+            participants.findNext();
+        }
+
+        participants.insert(student);
+
+        return true;
+    }
+
+    @Override
+    public boolean removeParticipantById(int studentId) {
+
+        if (participants.empty())
+            return false;
+
+        participants.findFirst();
+
+        while (true) {
+
+            IStudent current = participants.retrieve();
+
+            if (current.getStudentId() == studentId) {
+
+                participants.remove();
+                return true;
+            }
+
+            if (participants.last())
+                return false;
+
+            participants.findNext();
+        }
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return participants.empty();
+    }
+
+    @Override
+    public String getEventType() {
+        return "Workshop";
+    }
+
+    @Override
+    public boolean hasStudent(int studentId) {
+
+        if (participants.empty())
+            return false;
+
+        participants.findFirst();
+
+        while (true) {
+
+            IStudent current = participants.retrieve();
+
+            if (current.getStudentId() == studentId)
+                return true;
+
+            if (participants.last())
+                return false;
+
+            participants.findNext();
+        }
+    }
+
+    @Override
+    public String toString() {
+
+        String str = super.toString();
+
+        str += "\nParticipants: ";
+
+        if (participants.empty()) {
+
+            str += "No students";
+        }
+
+        else {
+
+            participants.findFirst();
+
+            while (true) {
+
+                str += participants.retrieve().getName();
+
+                if (participants.last())
+                    break;
+
+                str += ", ";
+
+                participants.findNext();
+            }
+        }
+
+        return str;
+    }
+}

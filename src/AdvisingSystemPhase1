@@ -5,140 +5,243 @@ public class AdvisingSystemPhase1 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        AdvisingSystem system = new AdvisingSystem();
 
-        AdvisingSystem system =
-                new AdvisingSystem();
+        system.loadStudentsFromCSV("students_100.csv");
+        system.loadEventsFromCSV("events_40.csv");
 
         int choice;
 
         do {
+            System.out.println("\nWelcome to the Student Advising System!");
+            System.out.println("Please choose an option:");
+            System.out.println("1. Add a student");
+            System.out.println("2. Search for a student");
+            System.out.println("3. Delete a student");
+            System.out.println("4. Schedule a meeting/workshop");
+            System.out.println("5. Print meeting/workshop details");
+            System.out.println("6. Print students by name");
+            System.out.println("7. Print all meetings/workshops alphabetically");
+            System.out.println("8. Exit");
 
-            System.out.println("\n===== Student Advising System =====");
-
-            System.out.println("1. Add Student");
-            System.out.println("2. Search Student By ID");
-            System.out.println("3. Print All Students");
-            System.out.println("4. Schedule Meeting");
-            System.out.println("5. Print All Events");
-            System.out.println("6. Exit");
-
-            System.out.print("Enter choice: ");
+            System.out.print("Enter your choice: ");
             choice = input.nextInt();
 
             switch (choice) {
 
                 case 1:
-
                     input.nextLine();
 
-                    System.out.print("Name: ");
+                    System.out.print("Enter the student's name: ");
                     String name = input.nextLine();
 
-                    System.out.print("ID: ");
+                    System.out.print("Enter the student's ID: ");
                     int id = input.nextInt();
-
                     input.nextLine();
 
-                    System.out.print("Email: ");
+                    System.out.print("Enter the student's email address: ");
                     String email = input.nextLine();
 
-                    System.out.print("Major: ");
+                    System.out.print("Enter the student's major: ");
                     String major = input.nextLine();
 
-                    System.out.print("Year Level: ");
+                    System.out.print("Enter the student's year level: ");
                     int year = input.nextInt();
-
                     input.nextLine();
 
-                    System.out.print("Notes: ");
+                    System.out.print("Enter any notes for the student: ");
                     String notes = input.nextLine();
 
-                    Student s =
-                            new Student(id, name,
-                                    email,
-                                    major,
-                                    year,
-                                    notes);
+                    Student s = new Student(id, name, email, major, year, notes);
 
                     if (system.addStudent(s))
-                        System.out.println("Student added");
+                        System.out.println("Student added successfully!");
                     else
-                        System.out.println("Student already exists");
+                        System.out.println("Student was not added.");
 
                     break;
 
                 case 2:
+                    System.out.println("Enter search criteria:");
+                    System.out.println("1. Name");
+                    System.out.println("2. Student ID");
+                    System.out.print("Enter your choice: ");
 
-                    System.out.print("Enter ID: ");
+                    int searchChoice = input.nextInt();
+                    input.nextLine();
 
-                    int searchId = input.nextInt();
+                    if (searchChoice == 1) {
+                        System.out.print("Enter the student's name: ");
+                        String searchName = input.nextLine();
 
-                    IStudent found =
-                            system.searchStudentById(searchId);
+                        System.out.println("Student found!");
+                        system.printStudentsByName(searchName);
+                    }
 
-                    if (found != null)
-                        System.out.println(found);
-                    else
-                        System.out.println("Student not found");
+                    else if (searchChoice == 2) {
+                        System.out.print("Enter the student's ID: ");
+                        int searchId = input.nextInt();
+
+                        IStudent found = system.searchStudentById(searchId);
+
+                        if (found != null) {
+                            System.out.println("Student found!");
+                            System.out.println(found);
+                        } else {
+                            System.out.println("Student not found.");
+                        }
+                    }
+
+                    else {
+                        System.out.println("Invalid search choice.");
+                    }
 
                     break;
 
                 case 3:
+                    System.out.print("Enter the student's ID: ");
+                    int deleteId = input.nextInt();
 
-                    system.printAllStudents();
+                    if (system.deleteStudent(deleteId))
+                        System.out.println("Student deleted successfully!");
+                    else
+                        System.out.println("Student not found.");
 
                     break;
 
                 case 4:
+                    System.out.println("Enter type:");
+                    System.out.println("1. Workshop");
+                    System.out.println("2. Meeting");
+                    System.out.print("Enter your choice: ");
 
+                    int typeChoice = input.nextInt();
                     input.nextLine();
 
-                    System.out.print("Title: ");
-                    String title = input.nextLine();
+                    if (typeChoice == 1) {
+                        System.out.print("Enter workshop title: ");
+                        String title = input.nextLine();
 
-                    System.out.print("Student ID: ");
-                    int studentId = input.nextInt();
+                        System.out.print("Enter student ID: ");
+                        int studentId = input.nextInt();
+                        input.nextLine();
 
-                    DateTime start =
-                            new DateTime(2026,5,20,10,0);
+                        System.out.print("Enter workshop date and time (MM/DD/YYYY HH:MM): ");
+                        String dateTime = input.nextLine();
 
-                    DateTime end =
-                            new DateTime(2026,5,20,11,0);
+                        System.out.print("Enter workshop location: ");
+                        String location = input.nextLine();
 
-                    boolean scheduled =
-                            system.scheduleMeeting(
-                                    title,
-                                    start,
-                                    end,
-                                    "CCIS Building",
-                                    studentId);
+                        IDateTime start = parseDateTime(dateTime);
+                        IDateTime end = new DateTime(start.getYear(), start.getMonth(),
+                                start.getDay(), start.getHour() + 1, start.getMinute());
 
-                    if (scheduled)
-                        System.out.println("Meeting scheduled");
-                    else
-                        System.out.println("Failed");
+                        int[] ids = { studentId };
+
+                        if (system.scheduleWorkshop(title, start, end, location, ids))
+                            System.out.println("Workshop scheduled successfully!");
+                        else
+                            System.out.println("Workshop was not scheduled.");
+                    }
+
+                    else if (typeChoice == 2) {
+                        System.out.print("Enter meeting title: ");
+                        String title = input.nextLine();
+
+                        System.out.print("Enter student ID: ");
+                        int studentId = input.nextInt();
+                        input.nextLine();
+
+                        System.out.print("Enter meeting date and time (MM/DD/YYYY HH:MM): ");
+                        String dateTime = input.nextLine();
+
+                        System.out.print("Enter meeting location: ");
+                        String location = input.nextLine();
+
+                        IDateTime start = parseDateTime(dateTime);
+                        IDateTime end = new DateTime(start.getYear(), start.getMonth(),
+                                start.getDay(), start.getHour() + 1, start.getMinute());
+
+                        if (system.scheduleMeeting(title, start, end, location, studentId))
+                            System.out.println("Meeting scheduled successfully!");
+                        else
+                            System.out.println("Meeting was not scheduled.");
+                    }
+
+                    else {
+                        System.out.println("Invalid type.");
+                    }
 
                     break;
 
                 case 5:
+                    System.out.println("Enter search criteria:");
+                    System.out.println("1. Student name");
+                    System.out.println("2. Workshop/Meeting title");
+                    System.out.print("Enter your choice: ");
 
-                    system.printAllEventsAlphabetically();
+                    int detailChoice = input.nextInt();
+                    input.nextLine();
+
+                    if (detailChoice == 1) {
+                        System.out.print("Enter the student name: ");
+                        String studentName = input.nextLine();
+
+                        system.printEventDetailsByStudentName(studentName);
+                    }
+
+                    else if (detailChoice == 2) {
+                        System.out.print("Enter the workshop/meeting title: ");
+                        String eventTitle = input.nextLine();
+
+                        system.printEventDetailsByTitle(eventTitle);
+                    }
+
+                    else {
+                        System.out.println("Invalid choice.");
+                    }
 
                     break;
 
                 case 6:
+                    input.nextLine();
 
-                    System.out.println("Goodbye");
+                    System.out.print("Enter the student's name: ");
+                    String studentName = input.nextLine();
+
+                    system.printStudentsByName(studentName);
 
                     break;
 
-                default:
+                case 7:
+                    system.printAllEventsAlphabetically();
+                    break;
 
-                    System.out.println("Invalid choice");
+                case 8:
+                    System.out.println("Goodbye!");
+                    break;
+
+                default:
+                    System.out.println("Invalid choice.");
             }
 
-        } while (choice != 6);
+        } while (choice != 8);
 
         input.close();
+    }
+
+    private static IDateTime parseDateTime(String text) {
+
+        String[] parts = text.split(" ");
+        String[] date = parts[0].split("/");
+        String[] time = parts[1].split(":");
+
+        int month = Integer.parseInt(date[0]);
+        int day = Integer.parseInt(date[1]);
+        int year = Integer.parseInt(date[2]);
+        int hour = Integer.parseInt(time[0]);
+        int minute = Integer.parseInt(time[1]);
+
+        return new DateTime(year, month, day, hour, minute);
     }
 }

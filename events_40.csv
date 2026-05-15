@@ -1,0 +1,103 @@
+event_id,title,type,student_id,start_date_time,end_date_time,location
+1,Internship Preparation Workshop,Workshop,4451048,5/15/2026 12:30,5/15/2026 14:00,Meeting Room B
+1,Internship Preparation Workshop,Workshop,4451038,5/15/2026 12:30,5/15/2026 14:00,Meeting Room B
+1,Internship Preparation Workshop,Workshop,4451021,5/15/2026 12:30,5/15/2026 14:00,Meeting Room B
+1,Internship Preparation Workshop,Workshop,4451029,5/15/2026 12:30,5/15/2026 14:00,Meeting Room B
+2,Time Management Workshop,Workshop,4451041,5/16/2026 16:00,5/16/2026 17:30,Advising Office 12
+2,Time Management Workshop,Workshop,4451000,5/16/2026 16:00,5/16/2026 17:30,Advising Office 12
+2,Time Management Workshop,Workshop,4451005,5/16/2026 16:00,5/16/2026 17:30,Advising Office 12
+2,Time Management Workshop,Workshop,4451075,5/16/2026 16:00,5/16/2026 17:30,Advising Office 12
+2,Time Management Workshop,Workshop,4451067,5/16/2026 16:00,5/16/2026 17:30,Advising Office 12
+3,Internship Preparation Workshop,Workshop,4451038,6/14/2026 13:30,6/14/2026 15:00,CS Lab 2
+3,Internship Preparation Workshop,Workshop,4451036,6/14/2026 13:30,6/14/2026 15:00,CS Lab 2
+3,Internship Preparation Workshop,Workshop,4451043,6/14/2026 13:30,6/14/2026 15:00,CS Lab 2
+4,Academic Writing Workshop,Workshop,4451045,5/29/2026 10:30,5/29/2026 12:00,Meeting Room B
+4,Academic Writing Workshop,Workshop,4451058,5/29/2026 10:30,5/29/2026 12:00,Meeting Room B
+5,Resume & Interview Workshop,Workshop,4451097,5/23/2026 13:30,5/23/2026 15:00,Library Seminar Room
+5,Resume & Interview Workshop,Workshop,4451045,5/23/2026 13:30,5/23/2026 15:00,Library Seminar Room
+5,Resume & Interview Workshop,Workshop,4451039,5/23/2026 13:30,5/23/2026 15:00,Library Seminar Room
+5,Resume & Interview Workshop,Workshop,4451064,5/23/2026 13:30,5/23/2026 15:00,Library Seminar Room
+5,Resume & Interview Workshop,Workshop,4451050,5/23/2026 13:30,5/23/2026 15:00,Library Seminar Room
+6,Academic Writing Workshop,Workshop,4451068,5/7/2026 10:00,5/7/2026 11:30,Main Hall A
+6,Academic Writing Workshop,Workshop,4451066,5/7/2026 10:00,5/7/2026 11:30,Main Hall A
+6,Academic Writing Workshop,Workshop,4451081,5/7/2026 10:00,5/7/2026 11:30,Main Hall A
+7,Academic Advising Session,Meeting,4451074,5/15/2026 11:00,5/15/2026 11:30,Advising Office 12
+8,Course Registration Help,Meeting,4451016,5/26/2026 9:00,5/26/2026 9:30,Main Hall A
+9,Research Skills Workshop,Workshop,4451049,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+9,Research Skills Workshop,Workshop,4451007,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+9,Research Skills Workshop,Workshop,4451080,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+9,Research Skills Workshop,Workshop,4451054,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+9,Research Skills Workshop,Workshop,4451098,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+9,Research Skills Workshop,Workshop,4451076,5/10/2026 11:00,5/10/2026 12:30,Library Seminar Room
+10,Internship Planning Meeting,Meeting,4451090,6/1/2026 14:30,6/1/2026 15:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451050,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451022,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451095,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451059,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451003,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+11,Internship Preparation Workshop,Workshop,4451055,5/13/2026 12:30,5/13/2026 14:00,Meeting Room B
+12,Course Registration Help,Meeting,4451098,6/6/2026 16:00,6/6/2026 16:30,Advising Office 12
+13,Scholarship Consultation,Meeting,4451088,5/15/2026 16:30,5/15/2026 17:00,Building 24 Room 105
+14,Resume & Interview Workshop,Workshop,4451014,6/8/2026 9:00,6/8/2026 10:30,Building 24 Room 105
+14,Resume & Interview Workshop,Workshop,4451008,6/8/2026 9:00,6/8/2026 10:30,Building 24 Room 105
+14,Resume & Interview Workshop,Workshop,4451046,6/8/2026 9:00,6/8/2026 10:30,Building 24 Room 105
+14,Resume & Interview Workshop,Workshop,4451057,6/8/2026 9:00,6/8/2026 10:30,Building 24 Room 105
+15,Scholarship Consultation,Meeting,4451053,5/15/2026 13:30,5/15/2026 14:00,Building 24 Room 105
+16,Academic Advising Session,Meeting,4451061,6/5/2026 9:00,6/5/2026 9:30,CS Lab 2
+17,Course Registration Help,Meeting,4451062,6/15/2026 16:00,6/15/2026 16:30,Main Hall A
+18,Internship Preparation Workshop,Workshop,4451045,5/10/2026 12:00,5/10/2026 13:30,Library Seminar Room
+18,Internship Preparation Workshop,Workshop,4451080,5/10/2026 12:00,5/10/2026 13:30,Library Seminar Room
+18,Internship Preparation Workshop,Workshop,4451087,5/10/2026 12:00,5/10/2026 13:30,Library Seminar Room
+18,Internship Preparation Workshop,Workshop,4451099,5/10/2026 12:00,5/10/2026 13:30,Library Seminar Room
+19,Academic Advising Session,Meeting,4451067,5/30/2026 14:00,5/30/2026 14:30,Building 24 Room 105
+20,Academic Advising Session,Meeting,4451022,6/11/2026 12:00,6/11/2026 12:30,CS Lab 2
+21,Course Registration Help,Meeting,4451017,6/6/2026 12:00,6/6/2026 12:30,Main Hall A
+22,Academic Writing Workshop,Workshop,4451036,5/26/2026 12:00,5/26/2026 13:30,Main Hall A
+22,Academic Writing Workshop,Workshop,4451090,5/26/2026 12:00,5/26/2026 13:30,Main Hall A
+22,Academic Writing Workshop,Workshop,4451024,5/26/2026 12:00,5/26/2026 13:30,Main Hall A
+22,Academic Writing Workshop,Workshop,4451081,5/26/2026 12:00,5/26/2026 13:30,Main Hall A
+22,Academic Writing Workshop,Workshop,4451002,5/26/2026 12:00,5/26/2026 13:30,Main Hall A
+23,Internship Planning Meeting,Meeting,4451073,6/1/2026 11:30,6/1/2026 12:00,Library Seminar Room
+24,Academic Writing Workshop,Workshop,4451047,5/28/2026 10:30,5/28/2026 12:00,Meeting Room B
+24,Academic Writing Workshop,Workshop,4451079,5/28/2026 10:30,5/28/2026 12:00,Meeting Room B
+24,Academic Writing Workshop,Workshop,4451081,5/28/2026 10:30,5/28/2026 12:00,Meeting Room B
+24,Academic Writing Workshop,Workshop,4451009,5/28/2026 10:30,5/28/2026 12:00,Meeting Room B
+25,Course Registration Help,Meeting,4451096,5/3/2026 14:00,5/3/2026 14:30,Meeting Room B
+26,Course Registration Help,Meeting,4451029,6/13/2026 13:30,6/13/2026 14:00,CS Lab 2
+27,Internship Planning Meeting,Meeting,4451008,5/17/2026 9:30,5/17/2026 10:00,Advising Office 12
+28,Course Registration Help,Meeting,4451097,5/9/2026 9:00,5/9/2026 9:30,Main Hall A
+29,Time Management Workshop,Workshop,4451037,5/1/2026 13:30,5/1/2026 15:00,Meeting Room B
+29,Time Management Workshop,Workshop,4451001,5/1/2026 13:30,5/1/2026 15:00,Meeting Room B
+29,Time Management Workshop,Workshop,4451097,5/1/2026 13:30,5/1/2026 15:00,Meeting Room B
+30,Course Registration Help,Meeting,4451096,5/10/2026 10:30,5/10/2026 11:00,Library Seminar Room
+31,Academic Advising Session,Meeting,4451029,5/9/2026 9:00,5/9/2026 9:30,CS Lab 2
+32,Research Skills Workshop,Workshop,4451096,5/22/2026 12:00,5/22/2026 13:30,Advising Office 12
+32,Research Skills Workshop,Workshop,4451069,5/22/2026 12:00,5/22/2026 13:30,Advising Office 12
+32,Research Skills Workshop,Workshop,4451090,5/22/2026 12:00,5/22/2026 13:30,Advising Office 12
+32,Research Skills Workshop,Workshop,4451080,5/22/2026 12:00,5/22/2026 13:30,Advising Office 12
+33,Scholarship Consultation,Meeting,4451063,6/11/2026 11:00,6/11/2026 11:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451046,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451000,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451099,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451006,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451008,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+34,Academic Writing Workshop,Workshop,4451007,5/19/2026 11:00,5/19/2026 12:30,Meeting Room B
+35,Course Registration Help,Meeting,4451003,6/8/2026 11:00,6/8/2026 11:30,Advising Office 12
+36,Internship Planning Meeting,Meeting,4451072,5/19/2026 9:30,5/19/2026 10:00,CS Lab 2
+37,Internship Preparation Workshop,Workshop,4451059,5/24/2026 13:00,5/24/2026 14:30,CS Lab 2
+37,Internship Preparation Workshop,Workshop,4451097,5/24/2026 13:00,5/24/2026 14:30,CS Lab 2
+37,Internship Preparation Workshop,Workshop,4451074,5/24/2026 13:00,5/24/2026 14:30,CS Lab 2
+37,Internship Preparation Workshop,Workshop,4451077,5/24/2026 13:00,5/24/2026 14:30,CS Lab 2
+37,Internship Preparation Workshop,Workshop,4451092,5/24/2026 13:00,5/24/2026 14:30,CS Lab 2
+38,Academic Writing Workshop,Workshop,4451012,6/7/2026 16:30,6/7/2026 18:00,Advising Office 12
+38,Academic Writing Workshop,Workshop,4451028,6/7/2026 16:30,6/7/2026 18:00,Advising Office 12
+38,Academic Writing Workshop,Workshop,4451006,6/7/2026 16:30,6/7/2026 18:00,Advising Office 12
+38,Academic Writing Workshop,Workshop,4451002,6/7/2026 16:30,6/7/2026 18:00,Advising Office 12
+38,Academic Writing Workshop,Workshop,4451058,6/7/2026 16:30,6/7/2026 18:00,Advising Office 12
+39,Internship Planning Meeting,Meeting,4451050,6/14/2026 13:30,6/14/2026 14:00,CS Lab 2
+40,Academic Writing Workshop,Workshop,4451014,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room
+40,Academic Writing Workshop,Workshop,4451090,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room
+40,Academic Writing Workshop,Workshop,4451079,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room
+40,Academic Writing Workshop,Workshop,4451033,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room
+40,Academic Writing Workshop,Workshop,4451052,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room
+40,Academic Writing Workshop,Workshop,4451010,5/9/2026 12:30,5/9/2026 14:00,Library Seminar Room

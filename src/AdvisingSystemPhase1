@@ -1,0 +1,144 @@
+import java.util.Scanner;
+
+public class AdvisingSystemPhase1 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        AdvisingSystem system =
+                new AdvisingSystem();
+
+        int choice;
+
+        do {
+
+            System.out.println("\n===== Student Advising System =====");
+
+            System.out.println("1. Add Student");
+            System.out.println("2. Search Student By ID");
+            System.out.println("3. Print All Students");
+            System.out.println("4. Schedule Meeting");
+            System.out.println("5. Print All Events");
+            System.out.println("6. Exit");
+
+            System.out.print("Enter choice: ");
+            choice = input.nextInt();
+
+            switch (choice) {
+
+                case 1:
+
+                    input.nextLine();
+
+                    System.out.print("Name: ");
+                    String name = input.nextLine();
+
+                    System.out.print("ID: ");
+                    int id = input.nextInt();
+
+                    input.nextLine();
+
+                    System.out.print("Email: ");
+                    String email = input.nextLine();
+
+                    System.out.print("Major: ");
+                    String major = input.nextLine();
+
+                    System.out.print("Year Level: ");
+                    int year = input.nextInt();
+
+                    input.nextLine();
+
+                    System.out.print("Notes: ");
+                    String notes = input.nextLine();
+
+                    Student s =
+                            new Student(id, name,
+                                    email,
+                                    major,
+                                    year,
+                                    notes);
+
+                    if (system.addStudent(s))
+                        System.out.println("Student added");
+                    else
+                        System.out.println("Student already exists");
+
+                    break;
+
+                case 2:
+
+                    System.out.print("Enter ID: ");
+
+                    int searchId = input.nextInt();
+
+                    IStudent found =
+                            system.searchStudentById(searchId);
+
+                    if (found != null)
+                        System.out.println(found);
+                    else
+                        System.out.println("Student not found");
+
+                    break;
+
+                case 3:
+
+                    system.printAllStudents();
+
+                    break;
+
+                case 4:
+
+                    input.nextLine();
+
+                    System.out.print("Title: ");
+                    String title = input.nextLine();
+
+                    System.out.print("Student ID: ");
+                    int studentId = input.nextInt();
+
+                    DateTime start =
+                            new DateTime(2026,5,20,10,0);
+
+                    DateTime end =
+                            new DateTime(2026,5,20,11,0);
+
+                    boolean scheduled =
+                            system.scheduleMeeting(
+                                    title,
+                                    start,
+                                    end,
+                                    "CCIS Building",
+                                    studentId);
+
+                    if (scheduled)
+                        System.out.println("Meeting scheduled");
+                    else
+                        System.out.println("Failed");
+
+                    break;
+
+                case 5:
+
+                    system.printAllEventsAlphabetically();
+
+                    break;
+
+                case 6:
+
+                    System.out.println("Goodbye");
+
+                    break;
+
+                default:
+
+                    System.out.println("Invalid choice");
+            }
+
+        } while (choice != 6);
+
+        input.close();
+    }
+}

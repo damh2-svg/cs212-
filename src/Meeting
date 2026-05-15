@@ -1,0 +1,43 @@
+public class Meeting extends Event implements IMeeting {
+
+    private IStudent student;
+
+    public Meeting(int id, String title,
+                   IDateTime start,
+                   IDateTime end,
+                   String location,
+                   IStudent student) {
+
+        super(id, title, start, end, location);
+
+        this.student = student;
+    }
+
+    @Override
+    public IStudent getStudent() {
+        return student;
+    }
+
+    @Override
+    public void setStudent(IStudent student) {
+        this.student = student;
+    }
+
+    @Override
+    public String getEventType() {
+        return "Meeting";
+    }
+
+    @Override
+    public boolean hasStudent(int studentId) {
+        return student != null &&
+               student.getStudentId() == studentId;
+    }
+
+    @Override
+    public String toString() {
+
+        return super.toString() +
+               "\nStudent: " + student.getName();
+    }
+}

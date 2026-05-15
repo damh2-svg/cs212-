@@ -1,3 +1,6 @@
+
+
+
 public class Workshop extends Event implements IWorkshop {
 
     private LinkedList<IStudent> participants;

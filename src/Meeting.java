@@ -1,3 +1,5 @@
+
+
 public class Meeting extends Event implements IMeeting {
 
     private IStudent student;

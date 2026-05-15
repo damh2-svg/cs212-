@@ -1,3 +1,4 @@
+
 /**
  * Minimal date/time abstraction used by meetings and workshops.
  * Implementations must define chronological ordering via compareTo.

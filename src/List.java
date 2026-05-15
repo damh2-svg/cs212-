@@ -1,3 +1,4 @@
+
 public interface List<T> {
 	public boolean empty ();
 	public boolean last ();

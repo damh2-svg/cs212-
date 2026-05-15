@@ -1,3 +1,5 @@
+
+
 public class EventList implements IEventList {
 
     private LinkedList<IEvent> events;

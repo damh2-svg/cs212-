@@ -1,0 +1,185 @@
+public class EventList implements IEventList {
+
+    private LinkedList<IEvent> events;
+
+    public EventList() {
+        events = new LinkedList<IEvent>();
+    }
+
+    @Override
+    public boolean addEvent(IEvent event) {
+
+        if (event == null)
+            return false;
+
+        if (events.empty()) {
+
+            events.insert(event);
+            return true;
+        }
+
+        events.findFirst();
+
+        while (true) {
+
+            IEvent current = events.retrieve();
+
+            if (event.compareTo(current) < 0) {
+
+                events.insertBefore(event);
+                return true;
+            }
+
+            if (events.last())
+                break;
+
+            events.findNext();
+        }
+
+        events.insert(event);
+
+        return true;
+    }
+
+    @Override
+    public boolean removeEventById(int eventId) {
+
+        if (events.empty())
+            return false;
+
+        events.findFirst();
+
+        while (true) {
+
+            IEvent current = events.retrieve();
+
+            if (current.getEventId() == eventId) {
+
+                events.remove();
+                return true;
+            }
+
+            if (events.last())
+                return false;
+
+            events.findNext();
+        }
+    }
+
+    @Override
+    public LinkedList<IEvent> getAllAlphabetically() {
+        return events;
+    }
+
+    @Override
+    public LinkedList<IEvent> findByTitle(String title) {
+
+        LinkedList<IEvent> result = new LinkedList<IEvent>();
+
+        if (events.empty())
+            return result;
+
+        events.findFirst();
+
+        while (true) {
+
+            IEvent current = events.retrieve();
+
+            if (current.getTitle().equalsIgnoreCase(title))
+                result.insert(current);
+
+            if (events.last())
+                break;
+
+            events.findNext();
+        }
+
+        return result;
+    }
+
+    @Override
+    public LinkedList<IEvent> findByStudentName(String studentFullName) {
+
+        LinkedList<IEvent> result = new LinkedList<IEvent>();
+
+        if (events.empty())
+            return result;
+
+        events.findFirst();
+
+        while (true) {
+
+            IEvent current = events.retrieve();
+
+            if (current instanceof Meeting) {
+
+                Meeting m = (Meeting) current;
+
+                if (m.getStudent().getName()
+                        .equalsIgnoreCase(studentFullName))
+
+                    result.insert(current);
+            }
+
+            else if (current instanceof Workshop) {
+
+                Workshop w = (Workshop) current;
+
+                LinkedList<IStudent> participants =
+                        w.getParticipants();
+
+                if (!participants.empty()) {
+
+                    participants.findFirst();
+
+                    while (true) {
+
+                        IStudent s = participants.retrieve();
+
+                        if (s.getName()
+                                .equalsIgnoreCase(studentFullName)) {
+
+                            result.insert(current);
+                            break;
+                        }
+
+                        if (participants.last())
+                            break;
+
+                        participants.findNext();
+                    }
+                }
+            }
+
+            if (events.last())
+                break;
+
+            events.findNext();
+        }
+
+        return result;
+    }
+
+    @Override
+    public int size() {
+
+        if (events.empty())
+            return 0;
+
+        int count = 0;
+
+        events.findFirst();
+
+        while (true) {
+
+            count++;
+
+            if (events.last())
+                break;
+
+            events.findNext();
+        }
+
+        return count;
+    }
+}

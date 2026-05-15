@@ -1,0 +1,101 @@
+student_id,name,email,major,year_level,notes
+4451000,Maha Al-Harbi,maha.alharbi.4451000@example.com,Cybersecurity,4,Scholarship guidance
+4451001,Huda Al-Shammari,huda.alshammari.4451001@example.com,Cybersecurity,1,Transfer evaluation
+4451002,Yousef Al-Shammari,yousef.alshammari.4451002@example.com,Computer Science,3,New student
+4451003,Maha Al-Harbi,maha.alharbi.4451003@example.com,Software Engineering,4,Internship advice
+4451004,Maha Al-Mutairi,maha.almutairi.4451004@example.com,Information Systems,4,Needs advising
+4451005,Yousef Al-Otaibi,yousef.alotaibi.4451005@example.com,Data Science,2,Course planning
+4451006,Dana Al-Qahtani,dana.alqahtani.4451006@example.com,Cybersecurity,4,Internship advice
+4451007,Rana Al-Otaibi,rana.alotaibi.4451007@example.com,Software Engineering,2,New student
+4451008,Sara Al-Saud,sara.alsaud.4451008@example.com,Software Engineering,1,Needs advising
+4451009,Rana Al-Zahrani,rana.alzahrani.4451009@example.com,Computer Science,1,Needs advising
+4451010,Fahad Al-Ghamdi,fahad.alghamdi.4451010@example.com,Information Systems,3,Needs advising
+4451011,Ahmad Al-Malki,ahmad.almalki.4451011@example.com,Data Science,1,Needs advising
+4451012,Ahmad Al-Shammari,ahmad.alshammari.4451012@example.com,Data Science,1,Scholarship guidance
+4451013,Saud Al-Qahtani,saud.alqahtani.4451013@example.com,Software Engineering,4,Graduation check
+4451014,Yousef Al-Ghamdi,yousef.alghamdi.4451014@example.com,Computer Science,2,Needs advising
+4451015,Omar Al-Shammari,omar.alshammari.4451015@example.com,Cybersecurity,4,Registration help
+4451016,Rana Al-Qahtani,rana.alqahtani.4451016@example.com,Software Engineering,1,Scholarship guidance
+4451017,Fahad Al-Zahrani,fahad.alzahrani.4451017@example.com,Information Systems,4,Graduation check
+4451018,Saud Al-Zahrani,saud.alzahrani.4451018@example.com,Data Science,4,New student
+4451019,Fahad Al-Saud,fahad.alsaud.4451019@example.com,Cybersecurity,3,Transfer evaluation
+4451020,Lama Al-Zahrani,lama.alzahrani.4451020@example.com,Information Systems,1,New student
+4451021,Lama Al-Qahtani,lama.alqahtani.4451021@example.com,Computer Science,4,Needs advising
+4451022,Omar Al-Dosari,omar.aldosari.4451022@example.com,Data Science,3,Graduation check
+4451023,Yousef Al-Dosari,yousef.aldosari.4451023@example.com,Data Science,4,Registration help
+4451024,Huda Al-Zahrani,huda.alzahrani.4451024@example.com,Data Science,4,Graduation check
+4451025,Omar Al-Dosari,omar.aldosari.4451025@example.com,Computer Science,3,Scholarship guidance
+4451026,Ali Al-Mutairi,ali.almutairi.4451026@example.com,Data Science,4,Scholarship guidance
+4451027,Khalid Al-Shammari,khalid.alshammari.4451027@example.com,Computer Science,4,Course planning
+4451028,Abdullah Al-Harbi,abdullah.alharbi.4451028@example.com,Data Science,4,Internship advice
+4451029,Yousef Al-Dosari,yousef.aldosari.4451029@example.com,Software Engineering,1,New student
+4451030,Noura Al-Malki,noura.almalki.4451030@example.com,Computer Science,1,Transfer evaluation
+4451031,Reem Al-Shammari,reem.alshammari.4451031@example.com,Cybersecurity,3,Graduation check
+4451032,Maha Al-Dosari,maha.aldosari.4451032@example.com,Information Systems,4,Needs advising
+4451033,Huda Al-Ghamdi,huda.alghamdi.4451033@example.com,Information Systems,2,New student
+4451034,Ali Al-Ghamdi,ali.alghamdi.4451034@example.com,Information Systems,2,Internship advice
+4451035,Dana Al-Shammari,dana.alshammari.4451035@example.com,Data Science,3,New student
+4451036,Maha Al-Zahrani,maha.alzahrani.4451036@example.com,Software Engineering,2,Transfer evaluation
+4451037,Fahad Al-Otaibi,fahad.alotaibi.4451037@example.com,Data Science,2,Transfer evaluation
+4451038,Ali Al-Shammari,ali.alshammari.4451038@example.com,Information Systems,1,Course planning
+4451039,Yousef Al-Ghamdi,yousef.alghamdi.4451039@example.com,Cybersecurity,3,Transfer evaluation
+4451040,Saud Al-Qahtani,saud.alqahtani.4451040@example.com,Cybersecurity,2,Transfer evaluation
+4451041,Khalid Al-Otaibi,khalid.alotaibi.4451041@example.com,Computer Science,2,Course planning
+4451042,Omar Al-Zahrani,omar.alzahrani.4451042@example.com,Information Systems,3,Needs advising
+4451043,Saud Al-Otaibi,saud.alotaibi.4451043@example.com,Software Engineering,1,Transfer evaluation
+4451044,Ali Al-Saud,ali.alsaud.4451044@example.com,Software Engineering,1,Needs advising
+4451045,Reem Al-Saud,reem.alsaud.4451045@example.com,Software Engineering,3,Transfer evaluation
+4451046,Reem Al-Saud,reem.alsaud.4451046@example.com,Information Systems,1,Needs advising
+4451047,Reem Al-Malki,reem.almalki.4451047@example.com,Computer Science,3,Needs advising
+4451048,Khalid Al-Saud,khalid.alsaud.4451048@example.com,Software Engineering,3,Transfer evaluation
+4451049,Huda Al-Ghamdi,huda.alghamdi.4451049@example.com,Data Science,4,Registration help
+4451050,Reem Al-Harbi,reem.alharbi.4451050@example.com,Cybersecurity,4,Internship advice
+4451051,Reem Al-Zahrani,reem.alzahrani.4451051@example.com,Software Engineering,1,New student
+4451052,Fahad Al-Malki,fahad.almalki.4451052@example.com,Software Engineering,4,Graduation check
+4451053,Huda Al-Zahrani,huda.alzahrani.4451053@example.com,Cybersecurity,4,Needs advising
+4451054,Sara Al-Saud,sara.alsaud.4451054@example.com,Computer Science,4,New student
+4451055,Sara Al-Otaibi,sara.alotaibi.4451055@example.com,Data Science,4,Scholarship guidance
+4451056,Omar Al-Zahrani,omar.alzahrani.4451056@example.com,Computer Science,4,Internship advice
+4451057,Fahad Al-Shammari,fahad.alshammari.4451057@example.com,Computer Science,3,Graduation check
+4451058,Rana Al-Shammari,rana.alshammari.4451058@example.com,Cybersecurity,3,Registration help
+4451059,Dana Al-Dosari,dana.aldosari.4451059@example.com,Information Systems,4,Graduation check
+4451060,Ahmad Al-Saud,ahmad.alsaud.4451060@example.com,Computer Science,2,Course planning
+4451061,Noura Al-Harbi,noura.alharbi.4451061@example.com,Computer Science,2,New student
+4451062,Abdullah Al-Saud,abdullah.alsaud.4451062@example.com,Computer Science,3,Course planning
+4451063,Reem Al-Zahrani,reem.alzahrani.4451063@example.com,Information Systems,1,Internship advice
+4451064,Abdullah Al-Mutairi,abdullah.almutairi.4451064@example.com,Computer Science,4,Graduation check
+4451065,Rana Al-Malki,rana.almalki.4451065@example.com,Software Engineering,2,Registration help
+4451066,Yousef Al-Qahtani,yousef.alqahtani.4451066@example.com,Computer Science,3,Course planning
+4451067,Fahad Al-Dosari,fahad.aldosari.4451067@example.com,Cybersecurity,3,Scholarship guidance
+4451068,Saud Al-Harbi,saud.alharbi.4451068@example.com,Computer Science,4,Transfer evaluation
+4451069,Ali Al-Dosari,ali.aldosari.4451069@example.com,Software Engineering,4,Graduation check
+4451070,Fahad Al-Dosari,fahad.aldosari.4451070@example.com,Software Engineering,2,Needs advising
+4451071,Ali Al-Shammari,ali.alshammari.4451071@example.com,Cybersecurity,3,Graduation check
+4451072,Dana Al-Mutairi,dana.almutairi.4451072@example.com,Information Systems,2,Internship advice
+4451073,Huda Al-Shammari,huda.alshammari.4451073@example.com,Data Science,3,Needs advising
+4451074,Saud Al-Otaibi,saud.alotaibi.4451074@example.com,Cybersecurity,2,Graduation check
+4451075,Omar Al-Harbi,omar.alharbi.4451075@example.com,Information Systems,4,Needs advising
+4451076,Dana Al-Zahrani,dana.alzahrani.4451076@example.com,Data Science,1,Transfer evaluation
+4451077,Noura Al-Saud,noura.alsaud.4451077@example.com,Information Systems,1,Graduation check
+4451078,Abdullah Al-Qahtani,abdullah.alqahtani.4451078@example.com,Software Engineering,4,Scholarship guidance
+4451079,Lama Al-Malki,lama.almalki.4451079@example.com,Computer Science,2,Transfer evaluation
+4451080,Dana Al-Ghamdi,dana.alghamdi.4451080@example.com,Cybersecurity,4,Graduation check
+4451081,Ali Al-Shammari,ali.alshammari.4451081@example.com,Information Systems,4,Graduation check
+4451082,Maha Al-Qahtani,maha.alqahtani.4451082@example.com,Cybersecurity,3,New student
+4451083,Ahmad Al-Otaibi,ahmad.alotaibi.4451083@example.com,Information Systems,4,New student
+4451084,Reem Al-Mutairi,reem.almutairi.4451084@example.com,Data Science,1,New student
+4451085,Sara Al-Saud,sara.alsaud.4451085@example.com,Data Science,2,Internship advice
+4451086,Khalid Al-Ghamdi,khalid.alghamdi.4451086@example.com,Computer Science,2,Internship advice
+4451087,Lama Al-Ghamdi,lama.alghamdi.4451087@example.com,Software Engineering,4,New student
+4451088,Sara Al-Otaibi,sara.alotaibi.4451088@example.com,Information Systems,3,Course planning
+4451089,Omar Al-Shammari,omar.alshammari.4451089@example.com,Data Science,2,Transfer evaluation
+4451090,Omar Al-Malki,omar.almalki.4451090@example.com,Computer Science,3,Registration help
+4451091,Ali Al-Dosari,ali.aldosari.4451091@example.com,Software Engineering,1,Internship advice
+4451092,Omar Al-Ghamdi,omar.alghamdi.4451092@example.com,Computer Science,1,Scholarship guidance
+4451093,Yousef Al-Harbi,yousef.alharbi.4451093@example.com,Cybersecurity,1,Graduation check
+4451094,Khalid Al-Mutairi,khalid.almutairi.4451094@example.com,Software Engineering,4,Registration help
+4451095,Reem Al-Mutairi,reem.almutairi.4451095@example.com,Data Science,1,Registration help
+4451096,Maha Al-Ghamdi,maha.alghamdi.4451096@example.com,Data Science,2,Needs advising
+4451097,Yousef Al-Harbi,yousef.alharbi.4451097@example.com,Data Science,4,Internship advice
+4451098,Ahmad Al-Shammari,ahmad.alshammari.4451098@example.com,Software Engineering,3,Scholarship guidance
+4451099,Rana Al-Malki,rana.almalki.4451099@example.com,Computer Science,2,Scholarship guidance

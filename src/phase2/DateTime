@@ -1,5 +1,4 @@
-package phase2;//
-
+package phase2;
 
 public class DateTime implements IDateTime {
 
@@ -10,6 +9,7 @@ public class DateTime implements IDateTime {
     private int minute;
 
     public DateTime(int year, int month, int day, int hour, int minute) {
+
         this.year = year;
         this.month = month;
         this.day = day;
@@ -42,10 +42,16 @@ public class DateTime implements IDateTime {
         return minute;
     }
 
-    @Override
-    public String format() {
-        return month + "/" + day + "/" + year + " " + hour + ":" + minute;
-    }
+   @Override
+public String format() {
+
+    String m = (month < 10 ? "0" : "") + month;
+    String d = (day < 10 ? "0" : "") + day;
+    String h = (hour < 10 ? "0" : "") + hour;
+    String min = (minute < 10 ? "0" : "") + minute;
+
+    return m + "/" + d + "/" + year + " " + h + ":" + min;
+}
 
     @Override
     public int compareTo(IDateTime other) {

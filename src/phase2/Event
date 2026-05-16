@@ -1,6 +1,6 @@
-package phase2;//
+package phase2;
 
-public abstract class Event implements IEvent {
+public class Event implements IEvent {
 
     protected int id;
 
@@ -8,13 +8,18 @@ public abstract class Event implements IEvent {
 
     protected ILocation location;
 
+    protected Set<Integer> participantIds;
+
     public Event(int id,
                  ITimeSlot timeSlot,
-                 ILocation location) {
+                 ILocation location,
+                 Set<Integer> participantIds) {
 
         this.id = id;
         this.timeSlot = timeSlot;
         this.location = location;
+
+        this.participantIds = participantIds;
     }
 
     @Override
@@ -30,6 +35,11 @@ public abstract class Event implements IEvent {
     @Override
     public ILocation getLocation() {
         return location;
+    }
+
+    @Override
+    public Set<Integer> getParticipantIds() {
+        return participantIds;
     }
 
     @Override

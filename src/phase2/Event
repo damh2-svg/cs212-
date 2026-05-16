@@ -1,0 +1,39 @@
+package phase2;//
+
+public abstract class Event implements IEvent {
+
+    protected int id;
+
+    protected ITimeSlot timeSlot;
+
+    protected ILocation location;
+
+    public Event(int id,
+                 ITimeSlot timeSlot,
+                 ILocation location) {
+
+        this.id = id;
+        this.timeSlot = timeSlot;
+        this.location = location;
+    }
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public ITimeSlot getTimeSlot() {
+        return timeSlot;
+    }
+
+    @Override
+    public ILocation getLocation() {
+        return location;
+    }
+
+    @Override
+    public int compareTo(IEvent other) {
+        return this.id - other.getId();
+    }
+}

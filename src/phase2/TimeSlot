@@ -1,4 +1,4 @@
-package phase2;//
+package phase2;
 
 public class TimeSlot implements ITimeSlot {
 
@@ -6,9 +6,6 @@ public class TimeSlot implements ITimeSlot {
     private IDateTime end;
 
     public TimeSlot(IDateTime start, IDateTime end) {
-
-        if (start.compareTo(end) >= 0)
-            throw new IllegalArgumentException("Start must be before end");
 
         this.start = start;
         this.end = end;

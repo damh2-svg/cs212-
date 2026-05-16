@@ -1,4 +1,4 @@
-package phase2;//
+package phase2;
 
 public class Location implements ILocation {
 
@@ -17,6 +17,17 @@ public class Location implements ILocation {
                     boolean online,
                     int capacity) {
 
+        this(id, name, reservable,
+             online, capacity,
+             reservable ? new Schedule() : null);
+    }
+
+    public Location(int id, String name,
+                    boolean reservable,
+                    boolean online,
+                    int capacity,
+                    ISchedule schedule) {
+
         this.id = id;
         this.name = name;
 
@@ -26,9 +37,13 @@ public class Location implements ILocation {
         this.capacity = capacity;
 
         if (reservable)
-            schedule = new Schedule();
+            this.schedule =
+                    (schedule == null)
+                    ? new Schedule()
+                    : schedule;
+
         else
-            schedule = null;
+            this.schedule = null;
     }
 
     @Override

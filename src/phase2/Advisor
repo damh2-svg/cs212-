@@ -1,0 +1,22 @@
+package phase2;//
+
+public class Advisor extends Person implements IAdvisor {
+
+    private ILocation office;
+
+    public Advisor(int id,
+                   String name,
+                   String email,
+                   ISchedule schedule,
+                   ILocation office) {
+
+        super(id, name, email, schedule);
+
+        this.office = office;
+    }
+
+    @Override
+    public ILocation getOffice() {
+        return office;
+    }
+}

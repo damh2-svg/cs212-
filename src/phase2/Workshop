@@ -1,28 +1,70 @@
-package phase2;//
+package phase2;
 
 public class Workshop extends Event implements IWorkshop {
 
     private String title;
+    private Set<Integer> advisorIds;
+    private Set<Integer> studentIds;
 
-    private BSTSet<Integer> advisorIds;
-
-    private BSTSet<Integer> studentIds;
-
-    private BSTSet<Integer> participantIds;
-
-    public Workshop(int id,
-                    String title,
-                    ITimeSlot timeSlot,
-                    ILocation location) {
-
-        super(id, timeSlot, location);
+    public Workshop(int id, String title, ITimeSlot timeSlot, ILocation location) {
+        super(id, timeSlot, location, new BSTSet<Integer>());
 
         this.title = title;
+        advisorIds = new BSTSet<Integer>();
+        studentIds = new BSTSet<Integer>();
+    }
 
-        advisorIds = new BSTSet<>();
-        studentIds = new BSTSet<>();
+    public Workshop(int id, String title, ITimeSlot timeSlot, ILocation location,
+                    Set<Integer> advisorIds, Set<Integer> studentIds) {
 
-        participantIds = new BSTSet<>();
+        super(id, timeSlot, location, new BSTSet<Integer>());
+
+        this.title = title;
+        this.advisorIds = new BSTSet<Integer>();
+        this.studentIds = new BSTSet<Integer>();
+
+        copyAdvisorIds(advisorIds);
+        copyStudentIds(studentIds);
+    }
+
+    private void copyAdvisorIds(Set<Integer> source) {
+        List<Integer> keys = source.getKeys();
+
+        if (!keys.empty()) {
+            keys.findFirst();
+
+            while (true) {
+                int id = keys.retrieve();
+
+                advisorIds.insert(id);
+                participantIds.insert(id);
+
+                if (keys.last())
+                    break;
+
+                keys.findNext();
+            }
+        }
+    }
+
+    private void copyStudentIds(Set<Integer> source) {
+        List<Integer> keys = source.getKeys();
+
+        if (!keys.empty()) {
+            keys.findFirst();
+
+            while (true) {
+                int id = keys.retrieve();
+
+                studentIds.insert(id);
+                participantIds.insert(id);
+
+                if (keys.last())
+                    break;
+
+                keys.findNext();
+            }
+        }
     }
 
     @Override
@@ -40,42 +82,23 @@ public class Workshop extends Event implements IWorkshop {
         return studentIds;
     }
 
-    @Override
-    public Set<Integer> getParticipantIds() {
-        return participantIds;
+    public void addAdvisor(int advisorId) {
+        advisorIds.insert(advisorId);
+        participantIds.insert(advisorId);
     }
 
-    public boolean addAdvisor(int advisorId) {
-
-        boolean added = advisorIds.insert(advisorId);
-
-        if (added)
-            participantIds.insert(advisorId);
-
-        return added;
-    }
-
-    public boolean addStudent(int studentId) {
-
-        boolean added = studentIds.insert(studentId);
-
-        if (added)
-            participantIds.insert(studentId);
-
-        return added;
-    }
-
-    public boolean removeAdvisor(int advisorId) {
-
+    public void removeAdvisor(int advisorId) {
+        advisorIds.remove(advisorId);
         participantIds.remove(advisorId);
-
-        return advisorIds.remove(advisorId);
     }
 
-    public boolean removeStudent(int studentId) {
+    public void addStudent(int studentId) {
+        studentIds.insert(studentId);
+        participantIds.insert(studentId);
+    }
 
+    public void removeStudent(int studentId) {
+        studentIds.remove(studentId);
         participantIds.remove(studentId);
-
-        return studentIds.remove(studentId);
     }
 }

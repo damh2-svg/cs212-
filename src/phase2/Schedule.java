@@ -2,65 +2,122 @@ package phase2;
 
 public class Schedule implements ISchedule {
 
+    private BSTMap<ITimeSlot, Integer> events;
+    private BSTSet<Integer> eventIds;
+
+    public Schedule() {
+        events = new BSTMap<ITimeSlot, Integer>();
+        eventIds = new BSTSet<Integer>();
+    }
+
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'size'");
+        return eventIds.size();
     }
 
     @Override
     public boolean empty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'empty'");
+        return eventIds.empty();
     }
 
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'clear'");
+        events.clear();
+        eventIds.clear();
     }
 
     @Override
     public boolean add(int eventId, ITimeSlot timeSlot) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+
+        if (eventIds.contains(eventId))
+            return false;
+
+        if (conflicts(timeSlot))
+            return false;
+
+        eventIds.insert(eventId);
+        events.insert(timeSlot, eventId);
+
+        return true;
     }
 
     @Override
     public boolean remove(int eventId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+
+        if (!eventIds.contains(eventId))
+            return false;
+
+        List<ITimeSlot> keys = events.getKeys();
+
+        if (!keys.empty()) {
+            keys.findFirst();
+
+            while (true) {
+                ITimeSlot slot = keys.retrieve();
+                Integer id = events.get(slot);
+
+                if (id.intValue() == eventId) {
+                    events.remove(slot);
+                    break;
+                }
+
+                if (keys.last())
+                    break;
+
+                keys.findNext();
+            }
+        }
+
+        eventIds.remove(eventId);
+        return true;
     }
 
     @Override
     public boolean contains(int eventId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'contains'");
+        return eventIds.contains(eventId);
     }
 
     @Override
     public boolean conflicts(ITimeSlot timeSlot) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'conflicts'");
+
+        List<ITimeSlot> keys = events.getKeys();
+
+        if (keys.empty())
+            return false;
+
+        keys.findFirst();
+
+        while (true) {
+            ITimeSlot current = keys.retrieve();
+
+            if (current.compareTo(timeSlot) == 0)
+                return true;
+
+            if (keys.last())
+                break;
+
+            keys.findNext();
+        }
+
+        return false;
     }
 
     @Override
     public Set<Integer> getEventIds() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEventIds'");
+        return eventIds;
     }
 
     @Override
     public Map<ITimeSlot, Integer> getEvents() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getEvents'");
+        return events;
     }
 
     @Override
     public void addMeeting(IMeeting meeting) throws SchedulingException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addMeeting'");
+
+        boolean added = add(meeting.getId(), meeting.getTimeSlot());
+
+        if (!added)
+            throw new SchedulingException(ScheduleFailureReason.CONFLICT_STUDENT);
     }
-
 }
-

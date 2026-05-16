@@ -1,5 +1,13 @@
 package phase2;
 
-public class ScheduleFailureReason {
-
+enum ScheduleFailureReason {
+    STUDENT_NOT_FOUND,
+    ADVISOR_NOT_FOUND,
+    LOCATION_NOT_FOUND,
+    LOCATION_NOT_RESERVABLE,
+    CONFLICT_STUDENT,
+    CONFLICT_ADVISOR,
+    CONFLICT_LOCATION,
+    CAPACITY_EXCEEDED,
+    EVENT_NOT_FOUND
 }
